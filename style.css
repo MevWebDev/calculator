@@ -7,6 +7,9 @@ body {
     padding: 0;
     margin: 0;
     background-color: #eeeeee;
+    user-select: none;
+    
+
 }
 #calcBackground {
     background-color: #aaaaaa;
@@ -51,14 +54,26 @@ body {
 #clearButton{
     background-color: #faa;
 }
+#plusMinusButton{
+    background-color: #afa;
+}
+#plusMinusButton:hover{
+    background-color: #8f8;
+}
 #clearButton:hover{
     background-color: #f88;
 }
-#deleteButton{
+#backButton{
     background-color: #aaf;
 }
-#deleteButton:hover{
+#backButton:hover{
     background-color: #88f;
+}
+#memoryButton{
+    background-color: #ffa;
+}
+#memoryButton:hover{
+    background-color: #ff8;
 }
 .functionButton div{
     padding: 10px;

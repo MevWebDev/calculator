@@ -1,7 +1,7 @@
-let first= '';
+let first= '0';
 let second = '';
 let operation = ' ';
-let result = 0
+let result = 0;
 let operatorClicked = false
 let numberButtons = document.querySelectorAll(".numberButton")
 let display = document.querySelector("#display")
@@ -22,6 +22,7 @@ numberButtons.forEach((numberButton) => {
             
             display.textContent +=  numberButton.textContent ; 
             first += numberButton.textContent;
+            
             
         
         }
@@ -70,3 +71,65 @@ function operate(a,operation,b){
         return a/b
     }
 }
+let clearButton = document.querySelector("#clearButton")
+clearButton.addEventListener('click', () =>{
+    console.log('jd')
+    first = '0'
+    second = ''
+    operation = ''
+    operatorClicked = false
+    display.textContent ='0'
+
+
+})
+
+let plusMinusButton = document.querySelector("#plusMinusButton")
+plusMinusButton.addEventListener('click', () => {
+   
+    
+    if (operatorClicked === false) {
+        
+        first = (parseFloat(first) * -1).toString();
+        display.textContent = first;
+    }
+
+    if (operatorClicked === true) {
+        
+        second = (parseFloat(second) * -1).toString();
+        display.textContent = second;
+    }
+});
+
+let backButton = document.querySelector("#backButton");
+
+backButton.addEventListener('click', () => {
+    console.log(display.textContent.length)
+    if (display.textContent.length > 2) {
+        display.textContent = display.textContent.slice(0, -1);
+        if (operatorClicked) {
+            second = second.slice(0, -1);
+        } else {
+            first = first.slice(0, -1);
+        }
+    } 
+    else if(display.textContent.length === 2){
+        display.textContent = '0';
+        if (operatorClicked) {
+            second = '';
+        } else {
+            first = '0';
+        }
+    }
+    
+    
+    
+    
+    else {
+        display.textContent = '0';
+        if (operatorClicked) {
+            second = '';
+        } else {
+            first = '0';
+        }
+    }
+});
