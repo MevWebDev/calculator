@@ -1,48 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
     <a href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"></a>
-</head>
-<body>
-    <!-- DESIGN IDEA: https://www.youtube.com/watch?app=desktop&v=qeUa2J1XMBg -->
+  </head>
+  <body>
     <div id="calcBackground">
-        <div id="calcDisplay">
-            <p id="display">0</p>
-        </div>
-        <div class="functionButton">
-            <div id="clearButton">CLEAR</div>
-            <div id="plusMinusButton">+ / -</div>
-            <div id="memoryButton">MEM</div>
-            <div id="backButton">BACK</div>
-        </div>
-        
-        <div class="numberButtons">
-            <div id="sevenButton" class ='numberButton'>7</div>
-            <div id="eightButton" class ='numberButton'>8</div>
-            <div id="nineButton" class ='numberButton'>9</div>
-            <div id="divideButton" class="operationButton">/</div>
-            <div id="fourButton" class ='numberButton'>4</div>
-            <div id="fiveButton" class ='numberButton'>5</div>
-            <div id="sixButton" class ='numberButton'>6</div>
-            <div id="multiplyButton" class="operationButton">*</div>
-            <div id="oneButton" class ='numberButton'>1</div>
-            <div id="twoButton" class ='numberButton'>2</div>
-            <div id="threeButton" class ='numberButton'>3</div>
-            <div id="plusButton" class="operationButton">-</div>
-            <div id="decimalButton" class ='numberButton'>.</div>
-            <div id="zeroButton" class ='numberButton'>0</div>
-            <div id="equalsButton">=</div>
-            <div id="minusButton" class="operationButton">+</div>
-        </div>
-        
+      <div id="calcDisplay">
+        <p id="spoiler"></p>
+        <p id="display"></p>
+      </div>
+      <div class="functionButton">
+        <div id="clearButton">CLEAR</div>
+        <div id="plusMinusButton">+ / -</div>
+        <div id="memoryButton">MEM</div>
+        <div id="backButton">BACK</div>
+      </div>
+      <div class="numberButtons">
+        <div id="sevenButton" class='numberButton'>7</div>
+        <div id="eightButton" class='numberButton'>8</div>
+        <div id="nineButton" class='numberButton'>9</div>
+        <div id="divideButton" class="operationButton">/</div>
+        <div id="fourButton" class='numberButton'>4</div>
+        <div id="fiveButton" class='numberButton'>5</div>
+        <div id="sixButton" class='numberButton'>6</div>
+        <div id="multiplyButton" class="operationButton">*</div>
+        <div id="oneButton" class='numberButton'>1</div>
+        <div id="twoButton" class='numberButton'>2</div>
+        <div id="threeButton" class='numberButton'>3</div>
+        <div id="plusButton" class="operationButton">-</div>
+        <div id="dotButton" class='numberButton'>.</div>
+        <div id="zeroButton" class='numberButton'>0</div>
+        <div id="equalsButton">=</div>
+        <div id="minusButton" class="operationButton">+</div>
+      </div>
     </div>
-        <div id="footer">
-            <p>Copyright © 2023 MevWebDev</p>
-            <a href="https://github.com/MevWebDev" target="_blank"><img src="src/github-mark.svg" alt=""></img></a>
-</body>
+    <div id="description">
+      <p>Note: MEM keeps track of every solution so you can use it later. </p>
+      <p>Esc = Clear | Alt = +- | M = Memory | Backspace = Back</p>
+    </div>
+    <div id="footer">
+      <p>Copyright © 2023 MevWebDev</p>
+      <a href="https://github.com/MevWebDev" target="_blank">
+        <img src="src/github-mark.svg" alt=""></img>
+      </a>
+    </div>
+  </body>
 </html>
