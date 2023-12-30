@@ -273,9 +273,9 @@ document.addEventListener('keydown', (event) =>{
         if (event.key !== ".") {
             if (operatorClicked === true) {
                 if (event.key=== '0' && second === '0') {
-                    return; // prevent appending another '0'
+                    return; 
                 } else if (second === '0') {
-                    second = event.key; // replace leading '0'
+                    second = event.key; 
                     display.textContent = second;
                 } else {
                     second += event.key;
@@ -283,9 +283,9 @@ document.addEventListener('keydown', (event) =>{
                 }
             } else if (operatorClicked === false) {
                 if (event.key === '0' && first === '0') {
-                    return; // prevent appending another '0'
+                    return; 
                 } else if (first === '0') {
-                    first = event.key; // replace leading '0'
+                    first = event.key; 
                     display.textContent = first;
                 } else {
                     first += event.key;
@@ -299,7 +299,7 @@ document.addEventListener('keydown', (event) =>{
         }
 
     }
-    if(event.key === '*' || event.key === '+' || event.key === '-' || event.key === '/' || event.key === 'Enter'){
+    if(event.key === '*' || event.key === '+' || event.key === '-' || event.key === '/'){
         dotted = false
         if (operatorClicked && second !== '') {
             a = parseFloat(first)
@@ -329,6 +329,23 @@ document.addEventListener('keydown', (event) =>{
         }
         checker = 1
     }
+    if (event.key === 'Enter'){
+        if (second) {
+            a = parseFloat(first)
+            b = parseFloat(second)
+            result = operate(a, operation, b)
+            spoilerButton.textContent = first + " " + operation + " " + second + ' = ' 
+            display.textContent = result
+            operatorClicked = false;
+            operationFinished = true
+            checker = 1
+            first = result
+            second = ''
+    
+        }
+    }
+
+
     if (event.key==='Escape'){
         first = ''
         second = ''
@@ -367,8 +384,8 @@ document.addEventListener('keydown', (event) =>{
         }
 
     }
-    if(event.key==="Alt"){
-        if (first!=='' ){
+    if(event.key==="Control"){
+        if (first!==''){
             if (operatorClicked === false) {
 
                 first = (parseFloat(first) * -1).toString();
@@ -390,16 +407,9 @@ document.addEventListener('keydown', (event) =>{
                 second = memory[i]
             }
             display.textContent = memory[i]
-    
-    
             i = i + 1
         }
     }
-
-
-
-
-
 
 })
 
